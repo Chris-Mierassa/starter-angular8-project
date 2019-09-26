@@ -1,26 +1,15 @@
 <app-nav></app-nav>
 <app-header></app-header>
-<div class="container m-5">
+<div class="container">
   <div class="col-12">
     <div class="jumbotron jumbotron-fluid p-3">
-      <h1 class="display-4">Hello, world!</h1>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <h1 class="display-4">{{ 'HOME.TITLE' | translate }}</h1>
+      <p class="lead">{{ 'HOME.INTRODUCTION' | translate }}</p>
       <hr class="my-4">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p>{{ 'HOME.INFORMATION' | translate }}</p>
       <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button">{{ 'HOME.LEARN_MORE' | translate }}</a>
       </p>
-
-      <div>
-        <h2>{{ 'AVION' | translate }}</h2>
-        <label>
-          {{ 'HOME.SELECT' | translate }}
-          <select #langSelect (change)="translate.use(langSelect.value)">
-            <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
-          </select>
-        </label>
-      </div>
-
     </div>
   </div>
 </div>

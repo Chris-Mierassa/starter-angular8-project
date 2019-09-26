@@ -1,8 +1,10 @@
 {
   "HOME": {
-    "TITLE": "Bonjour Angular avec ngx-translate !",
-    "SELECT": "Changer la langue"
-  },
-  "AVION": "truc en francais"
+    "TITLE": "Modèle de départ projet Angular8",
+    "INTRODUCTION": "Ce projet est un template de démarage pour un projet Angular8. Il est open source et developpé dans l'intérêt de la communauté.Merci de me crédité en cas d'utilisation de ce template (Chris MIERASSA).",
+    "INFORMATION": "Merci de cliquer ci-dessous pour avoir plus d'informations sur le fonctionnement de ce projet.",
+    "SELECT": "Changer la langue",
+    "LEARN_MORE": "En savoir plus..."
+  }
 }
 
