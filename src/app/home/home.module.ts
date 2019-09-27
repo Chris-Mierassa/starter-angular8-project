@@ -8,9 +8,10 @@ import {HomeComponent} from './home.component';
 import { HeaderComponent } from './header/header.component';
 import { IndexComponent } from './index/index.component';
 import {TranslateModule} from '@ngx-translate/core';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
-  declarations: [HomeComponent, NavComponent, FooterComponent, HeaderComponent, IndexComponent],
+  declarations: [HomeComponent, NavComponent, FooterComponent, HeaderComponent, IndexComponent, ContactComponent],
   exports: [
     NavComponent,
     FooterComponent,
