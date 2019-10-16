@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { IndexComponent } from './index/index.component';
 import {TranslateModule} from '@ngx-translate/core';
 import { ContactComponent } from './contact/contact.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [HomeComponent, NavComponent, FooterComponent, HeaderComponent, IndexComponent, ContactComponent],
@@ -19,7 +20,8 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    TranslateModule
+    TranslateModule,
+    ReactiveFormsModule
   ]
 })
 export class HomeModule { }

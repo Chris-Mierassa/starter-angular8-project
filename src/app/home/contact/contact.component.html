@@ -1,5 +1,131 @@
-<div class="container p-3">
+<div class="container p-3 mb-5">
+  <div class="col-12 mb-5 text-center">
+    <h2>{{ 'CONTACT.CONTACT_US' | translate }}</h2>
+  </div>
+
   <div class="col-12">
-    <p>contact works!</p>
+    <div class="row no-gutters d-flex justify-content-center">
+      <form [formGroup]="contactForm" class="col-12 col-md-7">
+<!--        firstname-->
+        <div class="row no-gutters mb-3">
+          <div class="col-12">{{ 'CONTACT.FIRST_NAME' | translate }}</div>
+          <div class="col-12">
+            <div class="row no-gutters">
+              <input
+                [ngClass]="{ 'is-invalid': submitted && contactForm.firstnameAbstractControl.errors }"
+                class="form-control"
+                formControlName="firstname"
+                id="firstname"
+                type="text"
+                [required]
+              />
+            </div>
+            <div class="row no-gutters text-danger" *ngIf="submitted && contactForm.firstnameAbstractControl.errors">
+              {{ 'CONTACT.FIRST_NAME_ERROR' | translate }}
+            </div>
+          </div>
+        </div>
+<!--        lastname-->
+        <div class="row no-gutters mb-3">
+          <div class="col-12">{{ 'CONTACT.LAST_NAME' | translate }}</div>
+          <div class="col-12">
+            <div class="row no-gutters">
+              <input
+                [ngClass]="{ 'is-invalid': submitted && contactForm.lastnameAbstractControl.errors }"
+                class="form-control"
+                formControlName="lastname"
+                id="lastname"
+                type="text"
+                [required]
+              />
+            </div>
+            <div class="row no-gutters text-danger" *ngIf="submitted && contactForm.lastnameAbstractControl.errors">
+              {{ 'CONTACT.LAST_NAME_ERROR' | translate }}
+            </div>
+          </div>
+        </div>
+<!--        email-->
+        <div class="row no-gutters mb-3">
+          <div class="col-12">{{ 'CONTACT.EMAIL' | translate }}</div>
+          <div class="col-12">
+            <div class="row no-gutters">
+              <input
+                [ngClass]="{ 'is-invalid': submitted && contactForm.emailAbstractControl.errors }"
+                class="form-control"
+                formControlName="email"
+                id="email"
+                type="mail"
+                [required]
+              />
+            </div>
+            <div class="row no-gutters text-danger" *ngIf="submitted && contactForm.emailAbstractControl.errors">
+              {{ 'CONTACT.EMAIL_ERROR' | translate }}
+            </div>
+          </div>
+        </div>
+<!--        cellphone-->
+        <div class="row no-gutters mb-3">
+          <div class="col-12">{{ 'CONTACT.CELLPHONE' | translate }}</div>
+          <div class="col-12">
+            <div class="row no-gutters">
+              <input
+                [ngClass]="{ 'is-invalid': submitted && contactForm.cellphoneAbstractControl.errors }"
+                class="form-control"
+                formControlName="cellphone"
+                id="cellphone"
+                type="number"
+                [required]
+              />
+            </div>
+            <div class="row no-gutters text-danger" *ngIf="submitted && contactForm.cellphoneAbstractControl.errors">
+              {{ 'CONTACT.CELLPHONE_ERROR' | translate }}
+            </div>
+          </div>
+        </div>
+<!--        object-->
+        <div class="row no-gutters mb-3">
+          <div class="col-12">{{ 'CONTACT.OBJECT' | translate }}</div>
+          <div class="col-12">
+            <div class="row no-gutters">
+              <input
+                [ngClass]="{ 'is-invalid': submitted && contactForm.objectAbstractControl.errors }"
+                class="form-control"
+                formControlName="object"
+                id="object"
+                type="text"
+                [required]
+              />
+            </div>
+            <div class="row no-gutters text-danger" *ngIf="submitted && contactForm.objectAbstractControl.errors">
+              {{ 'CONTACT.OBJECT_ERROR' | translate }}
+            </div>
+          </div>
+        </div>
+<!--        message-->
+        <div class="row no-gutters mb-3">
+          <div class="col-12">{{ 'CONTACT.MESSAGE' | translate }}</div>
+          <div class="col-12">
+            <div class="row no-gutters">
+              <textarea
+                [ngClass]="{ 'is-invalid': submitted && contactForm.messageAbstractControl.errors }"
+                class="form-control"
+                formControlName="message"
+                id="message"
+                type="text"
+                [required]></textarea>
+            </div>
+            <div class="row no-gutters text-danger" *ngIf="submitted && contactForm.messageAbstractControl.errors">
+              {{ 'CONTACT.MESSAGE_ERROR' | translate }}
+            </div>
+          </div>
+        </div>
+<!--        submit-->
+        <div class="row no-gutters">
+          <div class="col-12 text-right">
+            <button class="btn btn-success" (click)="onSubmit()">Valider</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

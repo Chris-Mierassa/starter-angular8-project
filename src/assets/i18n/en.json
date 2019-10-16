@@ -5,5 +5,20 @@
     "INFORMATION": "\nPlease click below for more information on how this project works.",
     "SELECT": "Change language",
     "LEARN_MORE": "Learn more..."
+  },
+  "CONTACT": {
+    "CONTACT_US": "Contact us",
+    "FIRST_NAME": "First name",
+    "FIRST_NAME_ERROR": "Please enter your first name",
+    "LAST_NAME": "Last name",
+    "LAST_NAME_ERROR": "Please enter your first name",
+    "EMAIL": "Email",
+    "EMAIL_ERROR": "Please enter your email",
+    "CELLPHONE": "Cellphone",
+    "CELLPHONE_ERROR": "Please enter your cellphone",
+    "OBJECT": "Object",
+    "OBJECT_ERROR": "Please enter the subject of your message",
+    "MESSAGE": "Message",
+    "MESSAGE_ERROR": "Please enter your message"
   }
 }

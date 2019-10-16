@@ -5,6 +5,21 @@
     "INFORMATION": "Merci de cliquer ci-dessous pour avoir plus d'informations sur le fonctionnement de ce projet.",
     "SELECT": "Changer la langue",
     "LEARN_MORE": "En savoir plus..."
+  },
+  "CONTACT": {
+    "CONTACT_US": "Nous contacter",
+    "FIRST_NAME": "Prénom",
+    "FIRST_NAME_ERROR": "Merci de saisir votre prénom",
+    "LAST_NAME": "Nom",
+    "LAST_NAME_ERROR": "Merci de saisir votre nom",
+    "EMAIL": "Email",
+    "EMAIL_ERROR": "Merci de saisir votre email",
+    "CELLPHONE": "Téléphone portable",
+    "CELLPHONE_ERROR": "Merci de saisir votre téléphone portable",
+    "OBJECT": "Objet",
+    "OBJECT_ERROR": "Merci de saisir l objet de votre message",
+    "MESSAGE": "Message",
+    "MESSAGE_ERROR": "Merci de saisir votre message"
   }
 }
 
