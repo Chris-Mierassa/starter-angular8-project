@@ -1,0 +1,38 @@
+<div class="container p-3 mb-5">
+  <div class="col-12 mb-3 px-3">
+    <h2 class="px-3">{{ 'ARTICLES.TITLE' | translate }}</h2>
+  </div>
+  <div class="col-12" *ngIf="articles">
+    <div class="row no-gutters">
+<!--      liste des articles-->
+      <div class="col-12 col-md-4 p-3" *ngFor="let article of articles" (click)="onSelect(article)">
+        <div class="row no-gutters mb-3">
+          <img [src]="article.image" class="col-12 w-100" style="max-height: 150px">
+        </div>
+        <div class="row no-gutters">
+          <div class="col-12"><h4>{{article.title}}</h4></div>
+          <div class="col-12"><p>{{article.description}}</p></div>
+        </div>
+      </div>
+      <!--  detail de l'article-->
+      <div class="col-12" *ngIf="selectedArticle">
+        <div class="row no-gutters">
+          <div class="col-12 bkg-img">
+            <img [src]="selectedArticle.image" class="col-12 w-100" style="max-height: 300px">
+          </div>
+        </div>
+        <div class="row no-gutters mb-3">
+          <div class="col-12 px-3"><h4>{{selectedArticle.title}}</h4></div>
+          <div class="col-12 px-3"><p>{{selectedArticle.description}}</p></div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-12 px-3 text-right">
+            <button class="btn btn-primary">
+              <a href="{{selectedArticle.link}}" target="_blank">{{ 'ARTICLES.BTN_MORE' | translate }}</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

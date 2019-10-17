@@ -20,6 +20,10 @@
     "OBJECT_ERROR": "Merci de saisir l objet de votre message",
     "MESSAGE": "Message",
     "MESSAGE_ERROR": "Merci de saisir votre message"
+  },
+  "ARTICLES": {
+    "TITLE": "Articles",
+    "BTN_MORE": "Plus d'informations"
   }
 }
 

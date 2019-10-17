@@ -20,5 +20,9 @@
     "OBJECT_ERROR": "Please enter the subject of your message",
     "MESSAGE": "Message",
     "MESSAGE_ERROR": "Please enter your message"
+  },
+  "ARTICLES": {
+    "TITLE": "Articles",
+    "BTN_MORE": "More information"
   }
 }

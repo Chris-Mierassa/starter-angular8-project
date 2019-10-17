@@ -7,6 +7,7 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ArticlesComponent } from './home/articles/articles.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -15,6 +16,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    ArticlesComponent,
   ],
   imports: [
     BrowserModule,
