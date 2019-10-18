@@ -18,8 +18,11 @@ export class ContactComponent implements OnInit {
 
   onSubmit(formData) {
     this.submitted = true;
-    console.warn(this.toastr.success('Votre  message à été envoyé!'));
-    console.warn(formData);
+    if (this.contactForm.valid) {
+      this.toastr.success('Votre  message à été envoyé!');
+    } else {
+      this.toastr.error('Votre message n\'a pas été transmis' );
+    }
   }
 
 }

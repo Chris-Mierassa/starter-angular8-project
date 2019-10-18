@@ -10,12 +10,14 @@ import { IndexComponent } from './index/index.component';
 import {TranslateModule} from '@ngx-translate/core';
 import { ContactComponent } from './contact/contact.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { PresentationComponent } from './presentation/presentation.component';
 
 @NgModule({
-  declarations: [HomeComponent, NavComponent, FooterComponent, HeaderComponent, IndexComponent, ContactComponent],
+  declarations: [HomeComponent, NavComponent, FooterComponent, HeaderComponent, IndexComponent, ContactComponent, PresentationComponent],
   exports: [
     NavComponent,
     FooterComponent,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,
