@@ -11,6 +11,7 @@ import { ArticlesComponent } from './home/articles/articles.component';
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ToastContainerModule, ToastrModule} from "ngx-toastr";
+// import { ngxLoadingAnimationTypes, NgxLoadingModule } from 'ngx-loading';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -35,10 +36,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    BrowserModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot({ positionClass: 'inline' }),
-    ToastContainerModule
+    ToastrModule.forRoot(),
+    ToastContainerModule,
+    // NgxLoadingModule.forRoot({
+    //   animationType: ngxLoadingAnimationTypes.circle,
+    //   fullScreenBackdrop: true,
+    //   primaryColour: '#066EB9',
+    //   secondaryColour: '#f3f3f4'
+    // })
   ],
   providers: [],
   bootstrap: [AppComponent]

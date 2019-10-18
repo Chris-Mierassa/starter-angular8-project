@@ -10,18 +10,15 @@ import {ToastContainerDirective, ToastrService} from "ngx-toastr";
 export class ContactComponent implements OnInit {
   contactForm: ContactForm = new ContactForm();
   submitted: boolean = false;
-  toastrMsg: any;
-  @ViewChild(ToastContainerDirective) toastContainer: ToastContainerDirective;
 
   constructor(private toastr: ToastrService) { }
 
   ngOnInit() {
-    this.toastr.overlayContainer = this.toastContainer;
   }
 
   onSubmit(formData) {
     this.submitted = true;
-    console.warn(this.toastr.success('Hello world!', 'Toastr fun!'));
+    console.warn(this.toastr.success('Votre  message à été envoyé!'));
     console.warn(formData);
   }
 

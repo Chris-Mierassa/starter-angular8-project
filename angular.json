@@ -8,8 +8,7 @@
       "schematics": {
         "@schematics/angular:component": {
           "styles": [
-            "styles.scss",
-            "node_modules/ngx-toastr/toastr.css"
+            "styles.scss"
           ]
         }
       },
