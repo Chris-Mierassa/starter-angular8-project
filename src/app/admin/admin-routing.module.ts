@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {IndexComponent} from './index/index.component';
 import {AdminComponent} from './admin.component';
+import {AuthGuardsService} from "../home/shared/services/auth-guards.service";
 
 const routes: Routes = [
   {
     path: '',
     component: AdminComponent,
-    children: [{path: 'home', component: IndexComponent}]
+    children: [{path: 'home', canActivate: [AuthGuardsService], component: IndexComponent}]
   }
 ];
 
