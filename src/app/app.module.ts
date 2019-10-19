@@ -8,19 +8,23 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ArticlesComponent } from './home/articles/articles.component';
-import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {ToastContainerModule, ToastrModule} from "ngx-toastr";
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ToastContainerModule, ToastrModule} from 'ngx-toastr';
+import { AdminComponent } from './admin/admin.component';
 // import { ngxLoadingAnimationTypes, NgxLoadingModule } from 'ngx-loading';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
+// @ts-ignore
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
     ArticlesComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

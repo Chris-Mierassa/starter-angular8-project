@@ -5,6 +5,8 @@ import {IndexComponent} from './index/index.component';
 import {ContactComponent} from './contact/contact.component';
 import {ArticlesComponent} from './articles/articles.component';
 import {PresentationComponent} from './presentation/presentation.component';
+import {SigninComponent} from './auth/signin/signin.component';
+import {SignupComponent} from './auth/signup/signup.component';
 
 const routes: Routes = [
   {
@@ -26,6 +28,16 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     children: [{path: 'contact', component: ContactComponent}]
+  },
+  {
+    path: '',
+    component: HomeComponent,
+    children: [{path: 'signin', component: SigninComponent}]
+  },
+  {
+    path: '',
+    component: HomeComponent,
+    children: [{path: 'signup', component: SignupComponent}]
   }
 ];
 

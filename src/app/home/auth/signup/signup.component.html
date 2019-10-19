@@ -1,0 +1,39 @@
+<div class="container py-5">
+  <div class="row no-gutters d-flex justify-content-center">
+    <div class="col-12 col-md-8">
+      <h2 class="mb-3">Créer un compte</h2>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="row no-gutters">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="email">Adresse mail</label>
+              <input type="text"
+                     id="email"
+                     class="form-control"
+                     formControlName="email">
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="password">Mot de passe</label>
+              <input type="password"
+                     id="password"
+                     class="form-control"
+                     formControlName="password">
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters mb-3">
+          <div class="col-12 text-right">
+            <button class="btn btn-primary"
+                    type="submit"
+                    [disabled]="signupForm.invalid">Créer mon compte</button>
+          </div>
+        </div>
+      </form>
+      <p class="text-danger">{{ errorMessage }}</p>
+    </div>
+  </div>
+</div>

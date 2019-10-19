@@ -11,9 +11,21 @@ import {TranslateModule} from '@ngx-translate/core';
 import { ContactComponent } from './contact/contact.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { PresentationComponent } from './presentation/presentation.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 @NgModule({
-  declarations: [HomeComponent, NavComponent, FooterComponent, HeaderComponent, IndexComponent, ContactComponent, PresentationComponent],
+  declarations: [
+    HomeComponent,
+    NavComponent,
+    FooterComponent,
+    HeaderComponent,
+    IndexComponent,
+    ContactComponent,
+    PresentationComponent,
+    SignupComponent,
+    SigninComponent
+  ],
   exports: [
     NavComponent,
     FooterComponent,
