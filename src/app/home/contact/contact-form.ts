@@ -8,7 +8,7 @@ export class ContactForm extends FormGroup {
       email: new FormControl('', Validators.required),
       cellphone: new FormControl('', Validators.required),
       object: new FormControl('', Validators.required),
-      message: new FormControl('', Validators.required),
+      message: new FormControl('', Validators.required)
     });
   }
   get firstnameAbstractControl(): AbstractControl {

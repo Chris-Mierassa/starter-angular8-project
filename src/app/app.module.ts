@@ -11,7 +11,6 @@ import { ArticlesComponent } from './home/articles/articles.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ToastContainerModule, ToastrModule} from 'ngx-toastr';
-import { AdminComponent } from './admin/admin.component';
 // import { ngxLoadingAnimationTypes, NgxLoadingModule } from 'ngx-loading';
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -23,8 +22,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    ArticlesComponent,
-    AdminComponent,
+    ArticlesComponent
   ],
   imports: [
     BrowserModule,

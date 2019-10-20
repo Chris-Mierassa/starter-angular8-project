@@ -4,6 +4,7 @@ import {Nav} from '../shared/models/nav';
 import {NavService} from './nav-service';
 import {AuthService} from "../shared/services/auth.service";
 import * as firebase from 'firebase';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-nav',
@@ -17,7 +18,8 @@ export class NavComponent implements OnInit {
 
   constructor(public  translate: TranslateService,
               private navService: NavService,
-              private  auth: AuthService
+              private  auth: AuthService,
+              private router: Router
   ) { }
 
   ngOnInit() {
@@ -38,6 +40,10 @@ export class NavComponent implements OnInit {
         }
       }
     );
+  }
+
+  admin() {
+    this.router.navigate(['/admin']);
   }
 
   signOut() {

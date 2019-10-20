@@ -1,0 +1,31 @@
+<div class="row no-gutters p-3">
+  <div class="col-12 mb-3 py-5">
+    <h2>Tous les articles</h2>
+  </div>
+  <div class="col-12 text-right mb-3">
+    <button class="btn btn-primary" (click)="newArticle()">Créer un article</button>
+  </div>
+  <div class="col-12 mb-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Link</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="articles">
+        <tr *ngFor="let article of articles" (click)="showArticle(i)">
+          <th scope="row">{{article.id}}</th>
+          <td>{{article.title}}</td>
+          <td>{{article.description}}</td>
+          <td><a href="{{article.link}}" target="_blank">{{article.link}}</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-12 text-right mb-3">
+    <button class="btn btn-primary" (click)="newArticle()">Créer un article</button>
+  </div>
+</div>
