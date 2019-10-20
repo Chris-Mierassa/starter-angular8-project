@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {CanActivate, Router} from '@angular/router';
-import { Observable } from 'rxjs/Observable';
 import * as firebase from 'firebase';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class AuthGuardsService implements CanActivate{
             if (user) {
               resolve(true);
             } else {
-              this.router.navigate(['signin']);
+              this.router.navigate(['/home', 'signin']);
               resolve(false);
             }
           }

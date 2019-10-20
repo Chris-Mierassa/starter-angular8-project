@@ -9,7 +9,7 @@ const routes: Routes = [
   {
     path: '',
     component: AdminComponent,
-    children: [{path: 'home', canActivate: [AuthGuardsService], component: IndexComponent}]
+    children: [{path: 'admin', canActivate: [AuthGuardsService], component: IndexComponent}]
   }
 ];
 
