@@ -1,17 +1,17 @@
 export class Article {
-  id: number;
+  // id: number;
   title: string;
   description: string;
   image: string;
   link: string[];
   constructor(
-    id: number,
+    // id: number,
     title: string,
     description: string,
     image: string,
     link: string[]
   ) {
-    this.id = id;
+    // this.id = id;
     this.title = title;
     this.description = description;
     this.image = image;

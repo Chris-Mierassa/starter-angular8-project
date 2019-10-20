@@ -18,8 +18,8 @@ export class AdminShowArticlesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.article = new Article("", '', '', '', '');
-    const  id = this.route.snapshot.params["id"];
+    this.article = new Article('', '', '', []);
+    const  id = this.route.snapshot.params['id'];
     this.articlesService.getOneArticle(+id).then(
       (article: Article) => {
         this.article = article;
