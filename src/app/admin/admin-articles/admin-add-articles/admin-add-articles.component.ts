@@ -31,7 +31,6 @@ export class AdminAddArticlesComponent implements OnInit {
     this.articlesForm = this.formBuilder.group({
       title: ['', Validators.required],
       description: ['', Validators.required],
-      image: ['', Validators.required],
       link: ['', Validators.required]
     });
   }
@@ -43,17 +42,13 @@ export class AdminAddArticlesComponent implements OnInit {
   onSubmit() {
     const title = this.articlesForm.get('title').value;
     const description = this.articlesForm.get('description').value;
-    const image = this.articlesForm.get('image').value;
     const link = this.articlesForm.get('link').value;
-    // const date = this.articlesForm.get('date');
-    // const date = formatDate(new Date(), 'dd/MM/yyyy', 'fr');
-    const  article = new Article(title, description, image, link);
-    // if (this.fileUrl && this.fileUrl !== '') {
-    //   article.image = this.fileUrl;
-    // }
-    console.warn(article);
+    const  article = new Article(title, description, link);
+    if (this.fileUrl && this.fileUrl !== '') {
+      article.photo = this.fileUrl;
+    }
     this.articlesService.createNewArticle(article);
-    this.router.navigate(['/admin/articles']);
+    // this.router.navigate(['/admin/articles']);
   }
 
   onUploadFile(file: File) {
