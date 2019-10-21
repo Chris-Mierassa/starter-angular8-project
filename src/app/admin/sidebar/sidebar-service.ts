@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {AppModule} from '../../app.module';
-import {Nav} from '../../home/shared/models/nav';
+import {Nav} from '../../shared/models/nav';
 
 @Injectable({
   providedIn: AppModule

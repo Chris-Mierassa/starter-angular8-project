@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {Article} from '../../../home/shared/models/article';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import {Article} from '../../../shared/models/article';
 import {Subscription} from 'rxjs';
-import {ArticlesService} from "../../../Services/articles.service";
-import {Router} from "@angular/router";
+import {ArticlesService} from '../../../shared/Services/articles.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-admin-articles',
@@ -12,6 +12,7 @@ import {Router} from "@angular/router";
 export class AdminArticlesComponent implements OnInit {
   articles: Article[];
   articlesSubscription: Subscription;
+  i: boolean;
 
   constructor(
     private articlesService: ArticlesService,
@@ -38,7 +39,8 @@ export class AdminArticlesComponent implements OnInit {
     this.router.navigate(['/admin/show-articles', id]);
   }
 
-  ngOnDestroy() {
-    this.articlesSubscription.unsubscribe();
-  }
+  // ngOnDestroy() {
+  //   this.articlesSubscription.unsubscribe();
+  // }
 }
+

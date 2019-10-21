@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import {Article} from '../home/shared/models/article';
+import {Article} from '../models/article';
 import {Subject} from 'rxjs';
 import * as firebase from 'firebase';
 import DataSnapshot = firebase.database.DataSnapshot;
+import {error} from 'util';
 
 @Injectable({
   providedIn: 'root'
@@ -62,5 +63,29 @@ export class ArticlesService {
     this.articles.splice(articleToRemove, 1);
     this.saveArticles();
     this.emitArticles();
+  }
+
+  uploadFile(file: File) {
+    return new Promise(
+      (resolve, reject) => {
+        const almostUniqueFileName = Date.now().toString();
+        console.warn(almostUniqueFileName);
+        const upload = firebase.storage().ref()
+        .child('images' + almostUniqueFileName + file.name).put(file);
+        console.warn(upload);
+        upload.on(firebase.storage.TaskEvent.STATE_CHANGED,
+          () => {
+            console.log('Chargement…');
+          },
+          (error) => {
+            console.log('Erreur de chargement ! : ' + error);
+            reject();
+          },
+          () => {
+            resolve(upload.snapshot.ref.getDownloadURL());
+          }
+        );
+      }
+    );
   }
 }

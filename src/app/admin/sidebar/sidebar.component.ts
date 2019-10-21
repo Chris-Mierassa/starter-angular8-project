@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Nav} from '../../home/shared/models/nav';
+import {Nav} from '../../shared/models/nav';
 import {SidebarService} from './sidebar-service';
 
 @Component({
@@ -15,7 +15,6 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
     this.sidebarItems = this.sidebarService.getSidebarItems();
-    console.warn(this.sidebarItems);
   }
 
 }

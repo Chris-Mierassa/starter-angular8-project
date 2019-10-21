@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Article} from "../../../home/shared/models/article";
+import {Article} from "../../../shared/models/article";
 import {ActivatedRoute, Router} from "@angular/router";
-import {ArticlesService} from "../../../Services/articles.service";
+import {ArticlesService} from "../../../shared/Services/articles.service";
 
 @Component({
   selector: 'app-admin-show-articles',

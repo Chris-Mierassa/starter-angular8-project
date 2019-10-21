@@ -1,4 +1,4 @@
-import {Article} from '../shared/models/article';
+import {Article} from '../../shared/models/article';
 
 
 export const ARTICLES: Article[] = [

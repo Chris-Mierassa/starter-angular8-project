@@ -9,18 +9,24 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th scope="col">#</th>
+<!--          <th scope="col">#</th>-->
           <th scope="col">Title</th>
           <th scope="col">Description</th>
           <th scope="col">Link</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody *ngIf="articles">
-        <tr *ngFor="let article of articles" (click)="showArticle(i)">
-          <th scope="row">{{article.id}}</th>
+        <tr *ngFor="let article of articles; let i = index" (click)="showArticle(i)">
+<!--          <th scope="row">{{article.id}}</th>-->
           <td>{{article.title}}</td>
           <td>{{article.description}}</td>
           <td><a href="{{article.link}}" target="_blank">{{article.link}}</a></td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteArticle(article)">
+              Supprimer
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>

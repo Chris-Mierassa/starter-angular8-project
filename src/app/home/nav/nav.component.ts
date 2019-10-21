@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
-import {Nav} from '../shared/models/nav';
+import {Nav} from '../../shared/models/nav';
 import {NavService} from './nav-service';
 import {AuthService} from "../shared/services/auth.service";
 import * as firebase from 'firebase';

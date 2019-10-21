@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Article} from '../shared/models/article';
+import {Article} from '../../shared/models/article';
 import {ARTICLES} from './articles-mock';
 
 @Component({

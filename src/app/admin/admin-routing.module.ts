@@ -27,7 +27,7 @@ const routes: Routes = [
   {
     path: '',
     component: AdminComponent,
-    children: [{path: 'show-articles', canActivate: [AuthGuardsService], component: AdminShowArticlesComponent}]
+    children: [{path: 'show-articles/:id', canActivate: [AuthGuardsService], component: AdminShowArticlesComponent}]
   }
 ];
 
