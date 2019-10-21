@@ -10,11 +10,17 @@ import {SidebarService} from './sidebar-service';
 export class SidebarComponent implements OnInit {
   brandName: string = 'STARTER KIT';
   sidebarItems: Nav[];
+  screenHeight: string;
+  screenWidth: string;
+  isToogle: boolean = true;
 
   constructor(private sidebarService: SidebarService) { }
 
   ngOnInit() {
     this.sidebarItems = this.sidebarService.getSidebarItems();
   }
-
+  toogleSidebar() {
+    this.isToogle = !this.isToogle;
+    console.warn('toogle------');
+  }
 }

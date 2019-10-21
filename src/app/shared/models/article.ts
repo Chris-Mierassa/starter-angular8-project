@@ -2,7 +2,7 @@ export class Article {
   title: string;
   description: string;
   link: string[];
-  photo: string;
+  photo: any;
   constructor(
     title: string,
     description: string,

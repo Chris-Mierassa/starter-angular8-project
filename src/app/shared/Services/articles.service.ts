@@ -69,8 +69,7 @@ export class ArticlesService {
     return new Promise(
       (resolve, reject) => {
         const almostUniqueFileName = Date.now().toString();
-        const upload = firebase.storage().ref().child('images' + almostUniqueFileName + file.name).put(file);
-        console.warn(upload);
+        const upload = firebase.storage().ref().child('images/' + almostUniqueFileName + file.name).put(file);
         upload.on(firebase.storage.TaskEvent.STATE_CHANGED,
           () => {
             console.log('Chargement…');

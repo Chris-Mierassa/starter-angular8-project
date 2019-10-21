@@ -7,20 +7,23 @@ export const ARTICLES: Article[] = [
     title: 'Article 1',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
     // image: '../../assets/images/articles/article1.jpg',
-    link: ['https://www.google.fr']
+    link: ['https://www.google.fr'],
+    photo: ''
   },
   {
     // id: 2,
     title: 'Article 2',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
     // image: '../../assets/images/articles/article2.jpeg',
-    link: ['https://www.google.fr']
+    link: ['https://www.google.fr'],
+    photo: ''
   },
   {
     // id: 3,
     title: 'Article 3',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
     // image: '../../assets/images/articles/article3.jpg',
-    link: ['https://www.google.fr']
+    link: ['https://www.google.fr'],
+    photo: ''
   }
 ];

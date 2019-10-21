@@ -48,7 +48,7 @@ export class AdminAddArticlesComponent implements OnInit {
       article.photo = this.fileUrl;
     }
     this.articlesService.createNewArticle(article);
-    // this.router.navigate(['/admin/articles']);
+    this.router.navigate(['/admin/articles']);
   }
 
   onUploadFile(file: File) {

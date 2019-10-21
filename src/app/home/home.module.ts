@@ -13,6 +13,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { PresentationComponent } from './presentation/presentation.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import {NgbCollapseModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SigninComponent } from './auth/signin/signin.component';
     CommonModule,
     HomeRoutingModule,
     TranslateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbCollapseModule
   ]
 })
 export class HomeModule { }

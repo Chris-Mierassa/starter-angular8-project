@@ -15,6 +15,7 @@ export class NavComponent implements OnInit {
   navitems: Nav[];
   brandName: string = 'STARTER KIT';
   isAuth: boolean;
+  toggleNavbar: boolean = true;
 
   constructor(public  translate: TranslateService,
               private navService: NavService,
@@ -51,4 +52,8 @@ export class NavComponent implements OnInit {
     console.warn('deconnexion');
   }
 
+  hideNav() {
+    this.toggleNavbar = !this.toggleNavbar;
+    console.warn(this.toggleNavbar);
+  }
 }

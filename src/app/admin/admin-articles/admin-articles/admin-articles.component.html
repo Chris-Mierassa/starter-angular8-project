@@ -13,6 +13,7 @@
           <th scope="col">Title</th>
           <th scope="col">Description</th>
           <th scope="col">Link</th>
+          <th scope="col">Image</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
@@ -22,6 +23,7 @@
           <td>{{article.title}}</td>
           <td>{{article.description}}</td>
           <td><a href="{{article.link}}" target="_blank">{{article.link}}</a></td>
+          <td><img class="w-100" *ngIf="article.photo" [src]="article.photo"></td>
           <td>
             <button class="btn btn-danger" (click)="deleteArticle(article)">
               Supprimer
