@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
   templateUrl: './admin-articles.component.html',
   styleUrls: ['./admin-articles.component.css']
 })
-export class AdminArticlesComponent implements OnInit {
+export class AdminArticlesComponent implements OnInit, OnDestroy {
   articles: Article[];
   articlesSubscription: Subscription;
   i: boolean;
@@ -17,7 +17,8 @@ export class AdminArticlesComponent implements OnInit {
   constructor(
     private articlesService: ArticlesService,
     private router: Router
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.articlesSubscription = this.articlesService.articlesSubject.subscribe(
@@ -25,6 +26,7 @@ export class AdminArticlesComponent implements OnInit {
         this.articles = articles;
       }
     );
+    this.articlesService.emitArticles();
   }
 
   newArticle() {
@@ -39,8 +41,8 @@ export class AdminArticlesComponent implements OnInit {
     this.router.navigate(['/admin/show-articles', id]);
   }
 
-  // ngOnDestroy() {
-  //   this.articlesSubscription.unsubscribe();
-  // }
+  ngOnDestroy() {
+    this.articlesSubscription.unsubscribe();
+  }
 }
 

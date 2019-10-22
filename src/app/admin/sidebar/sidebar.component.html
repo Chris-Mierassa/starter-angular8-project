@@ -10,13 +10,13 @@
         <button
           class="navbar-toggler float-right border"
           type="button"
-          data-target="#sidebar" (click)="toogleSidebar()">
+          data-target="#sidebar" (click)="sidebar()">
           <img src="../../../assets/images/menu/menu.svg" style="width: 25px;" />
         </button>
       </div>
-      <div class="col-12 d-inline-block d-md-none"><hr></div>
     </div>
     <div class="row no-gutters d-md-block" [ngbCollapse]="isToogle">
+      <div class="col-12 d-inline-block d-md-none"><hr></div>
       <div class="col-12 mb-3 text-justify" id="sidebar" *ngIf="sidebarItems">
         <div class="row no-gutters" *ngFor="let sidebar of sidebarItems">
           <div class="col-12 p-3">

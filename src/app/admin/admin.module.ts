@@ -8,7 +8,7 @@ import { AdminArticlesComponent } from './admin-articles/admin-articles/admin-ar
 import { AdminAddArticlesComponent } from './admin-articles/admin-add-articles/admin-add-articles.component';
 import { AdminShowArticlesComponent } from './admin-articles/admin-show-articles/admin-show-articles.component';
 import {FormGroup, ReactiveFormsModule} from '@angular/forms';
-import {NgbCollapseModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgbCollapseModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 

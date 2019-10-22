@@ -22,6 +22,7 @@ export class ArticlesComponent implements OnInit {
         this.articles = articles;
       }
     );
+    this.articlesService.emitArticles();
   }
 
   onSelect(article: Article):void {

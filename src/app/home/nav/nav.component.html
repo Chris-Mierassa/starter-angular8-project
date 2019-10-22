@@ -10,6 +10,7 @@
       <img src="../../../assets/images/menu/menu.svg" style="width: 25px;" />
     </button>
     <div class="navbar-collapse collapse navtop" id="navbar9" [ngbCollapse]="toggleNavbar">
+      <div class="col-12 d-inline-block d-md-none"><hr></div>
       <ul class="navbar-nav ml-auto" *ngIf="navitems">
         <li class="nav-item mx-3" *ngFor="let nav of navitems">
           <a class="nav-link" routerLink="{{nav.link}}">
@@ -21,18 +22,20 @@
             Connexion
           </a>
         </li>
-<!--        <li class="nav-item mx-3" *ngIf="isAuth">-->
-<!--          <a class="nav-link c-p" (click)="admin()">-->
-<!--            Admin-->
-<!--          </a>-->
-<!--        </li>-->
+<!--        ONLY WHEN USER IS AUTHENTICATED-->
         <li class="nav-item mx-3" *ngIf="isAuth">
-          <a class="nav-link c-p" (click)="signOut()">
+          <a class="nav-link c-p text-primary" (click)="admin()">
+            Admin
+          </a>
+        </li>
+<!--        ONLY WHEN USER IS AUTHENTICATED-->
+        <li class="nav-item mx-3" *ngIf="isAuth">
+          <a class="nav-link c-p text-primary" (click)="signOut()">
             Déconnexion
           </a>
         </li>
         <li class="nav-item mx-3 pt-2">
-          <span class="p-2"> Langue
+          <span class="p-0 p-md-2"> Langue
             <select #langSelect (change)="translate.use(langSelect.value)" class="ml-2">
             <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
           </select>

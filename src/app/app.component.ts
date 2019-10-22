@@ -36,6 +36,5 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.warn(firebase.apps.length);
   }
 }
